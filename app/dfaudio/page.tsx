@@ -3,6 +3,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { ArrowUpTrayIcon, XMarkIcon } from '@heroicons/react/24/solid';
+// import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/dist/types/server';
 
 interface FileWithPreview extends File {
   preview: string;
@@ -63,8 +64,12 @@ const Dropzone: React.FC<DropzoneProps> = ({ className }) => {
     
   }
 
+  // const { getUser } = getKindeServerSession();
+  // const user = getUser(); 
+
   return (
     <form onSubmit={handleSubmit} className='h-screen'>
+      <h1>Hi, {}</h1>
       <div
         {...getRootProps({
           className: className

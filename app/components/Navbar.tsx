@@ -1,6 +1,8 @@
 "use client"
 
 import * as React from "react"
+import MaxWidthWrapper from './MaxWidthWrapper'
+import { buttonVariants } from './ui/button'
 import Link from "next/link"
 import { cn } from "../lib/utils"
 import Logo from "./Logo"
@@ -13,7 +15,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/app/components/ui/navigation-menu"
-import { Button } from "@/app/components/ui/button"
+import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
+
+// import { ArrowRight } from "lucide-react"
 
 
 const components: { title: string; href: string; description: string }[] = [
@@ -55,71 +59,82 @@ const components: { title: string; href: string; description: string }[] = [
 ]
 
 export default function NavigationMenuDemo() {
+  // const { getUser } = getKindeServerSession()
+  // const user = getUser()
+
   return (
-    <div>
-      <div className="hidden sm:flex justify-around">
-        <Link href='/'>
-          <Logo />
-        </Link>
-        <NavigationMenu className="">
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <ListItem href="/dfaudio" title="DeepFake Audio detection">
-                    AI-powered identification of manipulated voice recordings.
-                  </ListItem>
-                  <ListItem href="/dfimage" title="DeepFake image detection">
-                    AI-Enhanced Recognition of Altered Images
-                  </ListItem>
-                  <ListItem href="/dfvideo" title="DeepFake video detection">
-                    Advanced AI for Real-Time Deepfake Video Detection
-                  </ListItem>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Research</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {components.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    >
-                      {component.description}
+    <nav className='sticky h-20 inset-x-0 top-0 z-30 w-full backdrop-blur-sm bg-white/30 transition-all'>
+      <MaxWidthWrapper>
+        <div className="hidden sm:flex justify-around">
+          <Link href='/'>
+            <Logo />
+          </Link>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                    <ListItem href="/dfaudio" title="DeepFake Audio detection">
+                      AI-powered identification of manipulated voice recordings.
                     </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/docs" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Documentation
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-        <div className="flex items-center gap-4">
-          <Button variant="outline" className="box-shadow shadow-md">
-            <Link href="/signin">SignIn</Link>
-          </Button>
-          <Button asChild className="bg-[#00274C]">
-            <Link href="/signup">SignUp</Link>
-          </Button>
+                    <ListItem href="/dfimage" title="DeepFake image detection">
+                      AI-Enhanced Recognition of Altered Images
+                    </ListItem>
+                    <ListItem href="/dfvideo" title="DeepFake video detection">
+                      Advanced AI for Real-Time Deepfake Video Detection
+                    </ListItem>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Research</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    {components.map((component) => (
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}
+                      >
+                        {component.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/docs" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Documentation
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+          <div className="flex items-center gap-4">
+            <LoginLink 
+              className={buttonVariants({
+                variant: 'ghost',
+                size: 'sm',
+              })}
+              >
+              Sign in
+            </LoginLink>
+            <RegisterLink
+              className={buttonVariants({
+                size: 'sm',
+              })}
+            >
+              Sign up
+            </RegisterLink>
+          </div>
         </div>
-      </div>
-      <div className="sm:hidden">
-        <p>-</p>
-      </div>
-    </div>
+        <div className="sm:hidden">
+          <p>=</p>
+        </div>
+      </MaxWidthWrapper>
+    </nav>
     
   )
 }
