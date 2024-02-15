@@ -1,22 +1,22 @@
-'use client'
+"use client";
 
-import * as React from "react"
-import Autoplay from "embla-carousel-autoplay"
-import Image from 'next/image'
+import * as React from "react";
+import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 
-import { Card, CardContent } from "./ui/card"
+import { Card, CardContent } from "./ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "./ui/carousel"
+} from "./ui/carousel";
 
-export default function CarouselPlugin() {  
+export default function CarouselPlugin() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
-  )
+  );
 
   return (
     <Carousel
@@ -32,10 +32,10 @@ export default function CarouselPlugin() {
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6">
                   <Image
-                      src='/preview.png'
-                      alt='product preview'
-                      width={1364}
-                      height={866}
+                    src="/preview.png"
+                    alt="product preview"
+                    width={1364}
+                    height={866}
                   />
                 </CardContent>
               </Card>
@@ -46,5 +46,5 @@ export default function CarouselPlugin() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }
