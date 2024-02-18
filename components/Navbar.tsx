@@ -9,7 +9,6 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
-import { cn } from "@/app/lib/utils";
 
 export default async function Navbar() {
   return (
@@ -33,7 +32,7 @@ export default async function Navbar() {
                 size: "sm",
               })}
             >
-              <SignInButton afterSignInUrl="/dashboard" mode="modal" />
+              <SignInButton afterSignInUrl="/" mode="modal" />
             </div>
             <div
               className={buttonVariants({
@@ -41,7 +40,7 @@ export default async function Navbar() {
                 size: "sm",
               })}
             >
-              <SignUpButton afterSignUpUrl="/dashboard" />
+              <SignUpButton afterSignUpUrl="/" />
             </div>
           </SignedOut>
         </div>

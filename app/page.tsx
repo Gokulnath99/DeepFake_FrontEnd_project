@@ -2,12 +2,12 @@
 import React from "react";
 
 // Importing custom components and utilities
-import MaxWidthWrapper from "./components/MaxWidthWrapper";
+import MaxWidthWrapper from "../components/MaxWidthWrapper";
 import Link from "next/link"; // Link component from Next.js for client-side transitions
 import { ArrowRight } from "lucide-react"; // Icon component from 'lucide-react' library
-import { buttonVariants } from "@/app/components/ui/button"; // Utility for button styling
+import { buttonVariants } from "@/components/ui/button"; // Utility for button styling
 import Image from "next/image";
-import Carousel from "./components/Carousel";
+import Carousel from "../components/Carousel";
 
 // HomePage functional component definition
 export default function HomePage() {
@@ -36,7 +36,7 @@ export default function HomePage() {
             size: "lg",
             className: "mt-5",
           })}
-          href="/dfaudio"
+          href="/deepfakeaudio"
         >
           Get Started <ArrowRight className="ml-2 h-5 w-5" />
         </Link>

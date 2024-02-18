@@ -65,31 +65,15 @@ export default function NavMenu() {
               <NavigationMenuTrigger>Products</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <ListItem href="/dashboard" title="DeepFake Audio detection">
+                  <ListItem href="/deepfakeaudio" title="DeepFake Audio detection">
                     AI-powered identification of manipulated voice recordings.
                   </ListItem>
-                  <ListItem href="/dfimage" title="DeepFake image detection">
+                  <ListItem href="/deepfakeimage" title="DeepFake image detection">
                     AI-Enhanced Recognition of Altered Images
                   </ListItem>
-                  <ListItem href="/dfvideo" title="DeepFake video detection">
+                  <ListItem href="/deepfakevideo" title="DeepFake video detection">
                     Advanced AI for Real-Time Deepfake Video Detection
                   </ListItem>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>Research</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                  {components.map((component) => (
-                    <ListItem
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    >
-                      {component.description}
-                    </ListItem>
-                  ))}
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>

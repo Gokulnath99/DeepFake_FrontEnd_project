@@ -1,9 +1,9 @@
 import { collection, getDocs } from "firebase/firestore";
-import DropZone from "../components/Dropzone";
+import DropZone from "@/components/Dropzone";
 import { auth } from "@clerk/nextjs";
 import { db } from "@/firebase";
 import { FileType } from "@/typings";
-import TableWrapper from "../components/table/TableWrapper";
+import TableWrapper from "@/components/table/TableWrapper";
 
 async function Dashboard() {
   const { userId } = auth();
