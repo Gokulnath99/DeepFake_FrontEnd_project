@@ -32,8 +32,8 @@ export default function RootLayout({
             'min-h-screen font-sans antialiased grainy'
             )}>
               <div>
+                <Navbar/>
                 <div style={{ margin: '0 auto', padding: '20px', maxWidth: '1200px'}}>
-                  <Navbar/>
                   <DarkModeToggle />
                   {children}
                 </div>

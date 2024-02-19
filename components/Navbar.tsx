@@ -12,15 +12,15 @@ import {
 
 export default async function Navbar() {
   return (
-    <nav className="sticky h-24 inset-x-0 top-0 z-30 transition-all bg-white dark:bg-[#0C0A09]">
-      <div className="hidden md:flex justify-between">
-        <Link className="flex items-center" href="/">
+    <nav className="sticky py-3 inset-x-0 top-0 z-30 transition-all bg-white dark:bg-[#0C0A09] px-6 ">
+      <div className="hidden md:flex flex-row">
+        <Link className="basis-1/2 items-center" href="/">
           <Logo />
         </Link>
 
         <NavMenu />
 
-        <div className="flex items-center gap-x-5">
+        <div className="flex-auto gap-x-5 self-center mx-5">
 
           <UserButton afterSignOutUrl="/" />
 

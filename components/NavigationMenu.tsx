@@ -57,8 +57,8 @@ const components: { title: string; href: string; description: string }[] = [
 
 export default function NavMenu() {
   return (
-    <div className="h-24 inset-x-0 top-10 pt-5 z-30 backdrop-blur-sm transition-all">
-      <div className="hidden sm:flex justify-around items-center">
+    <div className="backdrop-blur-sm transition-all flex-auto border-r-2">
+      <div className="hidden sm:flex justify-around content-center h-full ">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
