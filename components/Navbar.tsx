@@ -1,5 +1,5 @@
 import Link from "next/link";
-import DarkModeToggle from "./DarkModeToggle";
+// import DarkModeToggle from "./DarkModeToggle";
 import Logo from "./Logo";
 import { buttonVariants } from "./ui/button";
 import NavMenu from "../components/NavigationMenu";
@@ -12,7 +12,7 @@ import {
 
 export default async function Navbar() {
   return (
-    <nav className="sticky h-24 inset-x-0 top-0 z-30 backdrop-blur-sm transition-all">
+    <nav className="sticky h-24 inset-x-0 top-0 z-30 transition-all bg-white dark:bg-[#0C0A09]">
       <div className="hidden md:flex justify-between">
         <Link className="flex items-center" href="/">
           <Logo />
@@ -21,7 +21,6 @@ export default async function Navbar() {
         <NavMenu />
 
         <div className="flex items-center gap-x-5">
-          <DarkModeToggle />
 
           <UserButton afterSignOutUrl="/" />
 

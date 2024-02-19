@@ -5,6 +5,7 @@ import { cn } from "./lib/utils";
 import Navbar from "../components/Navbar";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { ClerkProvider } from '@clerk/nextjs'
+import DarkModeToggle from "@/components/DarkModeToggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,8 +32,9 @@ export default function RootLayout({
             'min-h-screen font-sans antialiased grainy'
             )}>
               <div>
-                <div style={{ margin: '0 auto', padding: '20px', maxWidth: '1200px' }}>
+                <div style={{ margin: '0 auto', padding: '20px', maxWidth: '1200px'}}>
                   <Navbar/>
+                  <DarkModeToggle />
                   {children}
                 </div>
               </div>
