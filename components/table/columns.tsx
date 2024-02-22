@@ -57,7 +57,7 @@ export const columns: ColumnDef<FileType>[] = [
       );
     }
   },
-  {
+  // {
   //   accessorKey: "report",
   //   header: "Report",
   //   cell: ({ renderValue, ...props }) => {
