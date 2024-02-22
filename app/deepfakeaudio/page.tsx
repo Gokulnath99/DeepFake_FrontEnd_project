@@ -3,7 +3,7 @@ import DropZone from "@/components/Dropzone";
 import { auth } from "@clerk/nextjs";
 import { db } from "@/firebase";
 import { FileType } from "@/typings";
-import TableWrapper from "@/components/table/TableWrapper";
+import TableWrapper from "@/components/Table/TableWrapper";
 
 async function Dashboard() {
   const { userId } = auth();

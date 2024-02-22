@@ -1,4 +1,4 @@
-import { LeadershipTeamData, TechnicalTeamData } from "./CardList";
+import { LeadershipTeamData, TechnicalTeamData } from "../../sample_data/CardList";
 import { HoverEffect } from "../ui/card-hover-effect";
 
 export function Card() {

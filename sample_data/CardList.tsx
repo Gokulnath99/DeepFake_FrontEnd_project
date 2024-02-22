@@ -1,5 +1,3 @@
-import * as React from "react";
-
 // import { Card } from "./Card";
 // import { CardData } from "./types";
 // import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -24,10 +22,9 @@ import * as React from "react";
 // );
 
 export const LeadershipTeamData = [
-    {
-      name: "Hafiz Malik",
-      description:
-        `Professor
+  {
+    name: "Hafiz Malik",
+    description: `Professor
         Department of Electrical and Computer Engineering
         University of Michigan – Dearborn
         Dearborn, MI 48128
@@ -35,30 +32,27 @@ export const LeadershipTeamData = [
         Phone: 313-593-5677
         URL: http://www-personal.umich.edu/~hafiz
         Email: my-last-name at umich dot edu`,
-      link: "",
-      imageURL: "",
-      team: "Leadership Team"
-    },
-    {
-      name: "Hashim Ali",
-      description:
-        "A technology company that builds economic infrastructure for the internet.",
-      link: "",
-      imageURL: "",
-      team: "Leadership Team"
-    },
-    
-  ];
+    link: "",
+    imageURL: "",
+    team: "Leadership Team",
+  },
+  {
+    name: "Hashim Ali",
+    description:
+      "A technology company that builds economic infrastructure for the internet.",
+    link: "",
+    imageURL: "",
+    team: "Leadership Team",
+  },
+];
 
-  export const TechnicalTeamData = [
-    {
-      name: "Gokulnath Anand",
-      description:
-        "A technology company that builds economic infrastructure for the internet.",
-      link: "",
-      imageURL: "",
-      team: "Technical Team"
-    }
-  ];
-
-
+export const TechnicalTeamData = [
+  {
+    name: "Gokulnath Anand",
+    description:
+      "A technology company that builds economic infrastructure for the internet.",
+    link: "",
+    imageURL: "",
+    team: "Technical Team",
+  },
+];

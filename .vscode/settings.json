@@ -4,6 +4,7 @@
         "nextjs",
         "signin",
         "signup",
+        "tabler",
         "trpc"
     ]
 }
