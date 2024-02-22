@@ -8,6 +8,7 @@ export type FileType = {
     size: number;
 }
 
+
 type SampleItem = {
     description: string;
     'image-url': string;
@@ -17,3 +18,16 @@ type SampleItem = {
 export type Data = {
     sample: SampleItem[];
 };
+
+
+
+export type CardData = {
+    items: {
+      name: string;
+      description: string;
+      link: string;
+      imageURL: string;
+      team: string;
+    }[];
+    className?: string;
+  };
