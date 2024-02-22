@@ -44,4 +44,28 @@ export const columns: ColumnDef<FileType>[] = [
       return <span>{prettyBytes(renderValue() as number)}</span>;
     },
   },
+  {
+    accessorKey: "status",
+    header: "Status",
+    cell: ({ renderValue, ...props }) => {
+      return (
+        <div className="flex">
+          <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-1.5 my-3 inline-block align-middle">
+            In Progress <span className="animate-spin inline-block align-middle size-4 border-[3px] border-current border-t-transparent text-orange-600 dark:text-white rounded-full" role="status" aria-label="loading"></span>
+          </p>
+        </div>
+      );
+    }
+  },
+  {
+  //   accessorKey: "report",
+  //   header: "Report",
+  //   cell: ({ renderValue, ...props }) => {
+  //     return (
+  //       <div className="flex">
+          
+  //       </div>
+  //     );
+  //   }
+  // },
 ];
