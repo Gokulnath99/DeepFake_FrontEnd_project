@@ -7,3 +7,13 @@ export type FileType = {
     type: string;
     size: number;
 }
+
+type SampleItem = {
+    description: string;
+    'image-url': string;
+};
+
+// Define a type for the data structure
+export type Data = {
+    sample: SampleItem[];
+};

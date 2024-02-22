@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import DropzoneComponent from "react-dropzone";
-import { cn } from "@/app/lib/utils";
+import { cn } from "@/lib/utils";
 import { useUser } from "@clerk/nextjs";
 import {
   addDoc,

@@ -1,5 +1,4 @@
 import Link from "next/link";
-// import DarkModeToggle from "./DarkModeToggle";
 import Logo from "./Logo";
 import { buttonVariants } from "./ui/button";
 import NavMenu from "../components/NavigationMenu";
