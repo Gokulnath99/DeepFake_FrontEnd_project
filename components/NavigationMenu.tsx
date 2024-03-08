@@ -65,7 +65,7 @@ export default function NavMenu() {
               <NavigationMenuTrigger>Products</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <ListItem href="/deepfakeaudio" title="DeepFake Audio detection">
+                  <ListItem href="/dashboard" title="DeepFake Audio detection">
                     AI-powered identification of manipulated voice recordings.
                   </ListItem>
                   <ListItem href="/deepfakeimage" title="DeepFake image detection">

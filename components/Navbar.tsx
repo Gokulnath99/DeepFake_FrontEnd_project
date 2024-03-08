@@ -11,7 +11,7 @@ import {
 
 export default async function Navbar() {
   return (
-    <nav className="sticky py-3 inset-x-0 top-0 z-30 transition-all bg-white dark:bg-[#0C0A09] px-6">
+    <nav className="sticky py-3 inset-x-0 top-0 z-30 transition-all bg-white dark:bg-[#0C0A09] px-6 drop-shadow-lg">
       <div className="hidden md:flex flex-row items-center">
         <Link className="basis-1/2 items-center" href="/">
           <Logo />

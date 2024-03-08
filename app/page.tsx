@@ -8,6 +8,7 @@ import { ArrowRight } from "lucide-react"; // Icon component from 'lucide-react'
 import { buttonVariants } from "@/components/ui/button"; // Utility for button styling
 import Image from "next/image";
 import Carousel from "../components/Carousel";
+import { MovingCard } from "@/components/MovingCard";
 
 // HomePage functional component definition
 export default function HomePage() {
@@ -36,7 +37,7 @@ export default function HomePage() {
             size: "lg",
             className: "mt-5",
           })}
-          href="/deepfakeaudio"
+          href="/dashboard"
         >
           Get Started <ArrowRight className="ml-2 h-5 w-5" />
         </Link>
@@ -58,6 +59,8 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+
+      <MovingCard/>
 
       {/* Feature section */}
       <div className="mx-auto mb-32 mt-32 max-w-5xl sm:mt-56">

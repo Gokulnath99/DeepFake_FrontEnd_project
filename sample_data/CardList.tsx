@@ -33,7 +33,7 @@ export const LeadershipTeamData = [
         URL: http://www-personal.umich.edu/~hafiz
         Email: my-last-name at umich dot edu`,
     link: "",
-    imageURL: "",
+    imageURL: "/Malik.png",
     team: "Leadership Team",
   },
   {
