@@ -15,6 +15,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { FileType } from "@/typings";
+import { Button } from "../ui/button";
+import { HiDotsHorizontal } from "react-icons/hi";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -32,7 +35,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="rounded-md border">
+    <div className="rounded-md border dark:bg-stone-900 bg-stone-200">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -59,11 +62,24 @@ export function DataTable<TData, TValue>({
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
               >
-                {row.getVisibleCells().map((cell) => (
+                {
+                row.getVisibleCells().map((cell) => (
                   <TableCell key={cell.id}>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
                 ))}
+                <TableCell key={(row.original as FileType).id}>
+                  <Button
+                    variant={"outline"}
+                    onClick={() => {
+                      console.log('delete')
+                    }
+                      // openDeleteModule((row.original as FileType).id)
+                    }
+                  >
+                    <HiDotsHorizontal /> 
+                  </Button>
+                </TableCell>
               </TableRow>
             ))
           ) : (

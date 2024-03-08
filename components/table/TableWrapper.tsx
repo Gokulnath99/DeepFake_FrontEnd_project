@@ -35,6 +35,7 @@ function TableWrapper({ skeletonFiles }: { skeletonFiles: FileType[] }) {
       downloadURL: doc.data().downloadURL,
       type: doc.data().type,
       size: doc.data().size,
+      status: doc.data().status
     }));
 
     setInitialFiles(files);
