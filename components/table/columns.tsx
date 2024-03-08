@@ -9,6 +9,9 @@ import {
 } from "react-file-icon";
 import prettyBytes from "pretty-bytes";
 import { COLOR_EXTENSION_MAP } from "@/constant";
+import { useState } from "react";
+import { MdOutlineDownloadDone } from "react-icons/md";
+import { MdError } from "react-icons/md";
 
 export const columns: ColumnDef<FileType>[] = [
   {
@@ -48,14 +51,34 @@ export const columns: ColumnDef<FileType>[] = [
     accessorKey: "status",
     header: "Status",
     cell: ({ renderValue, ...props }) => {
+      const [status, setStatus] = useState("in-progress");
+
       return (
         <div className="flex">
-          <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-1.5 my-3 inline-block align-middle">
-            In Progress <span className="animate-spin inline-block align-middle size-4 border-[3px] border-current border-t-transparent text-orange-600 dark:text-white rounded-full" role="status" aria-label="loading"></span>
-          </p>
+          {status === "in-progress" && (
+            <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-1.5 my-3 inline-block align-middle">
+              In Progress{" "}
+              <span
+                className="animate-spin inline-block align-middle size-4 border-[3px] border-current border-t-transparent text-orange-600 dark:text-white rounded-full"
+                role="status"
+                aria-label="loading"
+              ></span>
+            </p>
+          )}
+          {status === "done" && (
+            <p className="border border-green-500 bg-orange-100 dark:bg-orange-900/20 text-green-600 text-xs rounded-full px-2 py-1.5 my-3 inline-block align-middle">
+              Done{" "}
+              <MdOutlineDownloadDone className="inline-block align-middle size-4" />
+            </p>
+          )}
+          {status === "error" && (
+            <p className="border border-red-500 bg-orange-100 dark:bg-orange-900/20 text-red-600 text-xs rounded-full px-2 py-1.5 my-3 inline-block align-middle">
+              Error <MdError className="inline-block align-middle size-4" />
+            </p>
+          )}
         </div>
       );
-    }
+    },
   },
   // {
   //   accessorKey: "report",
@@ -63,7 +86,7 @@ export const columns: ColumnDef<FileType>[] = [
   //   cell: ({ renderValue, ...props }) => {
   //     return (
   //       <div className="flex">
-          
+
   //       </div>
   //     );
   //   }

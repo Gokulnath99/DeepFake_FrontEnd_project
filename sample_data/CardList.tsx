@@ -41,7 +41,7 @@ export const LeadershipTeamData = [
     description:
       "A technology company that builds economic infrastructure for the internet.",
     link: "",
-    imageURL: "",
+    imageURL: "/Hashim_Ali.png",
     team: "Leadership Team",
   },
 ];
@@ -52,7 +52,7 @@ export const TechnicalTeamData = [
     description:
       "A technology company that builds economic infrastructure for the internet.",
     link: "",
-    imageURL: "",
+    imageURL: "/Gokul.png",
     team: "Technical Team",
   },
 ];

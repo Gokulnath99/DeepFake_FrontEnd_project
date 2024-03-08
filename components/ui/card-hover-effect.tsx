@@ -53,7 +53,7 @@ export const HoverEffect = ({
                 <div className="h-full">
                     <BackgroundGradient className="rounded-[22px] w-full p-4 sm:p-10 bg-white dark:bg-zinc-900 h-full">
                         <Image
-                        src={``}
+                        src={item.imageURL}
                         alt={item.name}
                         height="300"
                         width="300"
