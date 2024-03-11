@@ -23,8 +23,7 @@ export default function HomePage() {
           </p>
         </div>
         <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl">
-          Lead the Fight Against Deepfake Audio with{" "}
-          <span className="text-yellow-500">LIVE</span>
+          Leading the Fight Against Deepfakes
         </h1>
         <p className="mt-5 max-w-prose sm:text-lg">
           Detection and Analysis with State-of-the-Art AI. Secure the Truth in a
