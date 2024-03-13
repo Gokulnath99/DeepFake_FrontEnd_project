@@ -15,8 +15,6 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-// import { ArrowRight } from "lucide-react"
-
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Alert Dialog",
@@ -57,7 +55,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export default function NavMenu() {
   return (
-    <div className="backdrop-blur-sm transition-all flex-auto border-r-2">
+    <div className="transition-all flex-auto">
       <div className="hidden sm:flex justify-around content-center h-full ">
         <NavigationMenu>
           <NavigationMenuList>
@@ -68,10 +66,16 @@ export default function NavMenu() {
                   <ListItem href="/dashboard" title="DeepFake Audio detection">
                     AI-powered identification of manipulated voice recordings.
                   </ListItem>
-                  <ListItem href="/deepfakeimage" title="DeepFake image detection">
+                  <ListItem
+                    href="/deepfakeimage"
+                    title="DeepFake image detection"
+                  >
                     AI-Enhanced Recognition of Altered Images
                   </ListItem>
-                  <ListItem href="/deepfakevideo" title="DeepFake video detection">
+                  <ListItem
+                    href="/deepfakevideo"
+                    title="DeepFake video detection"
+                  >
                     Advanced AI for Real-Time Deepfake Video Detection
                   </ListItem>
                 </ul>
