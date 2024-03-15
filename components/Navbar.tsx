@@ -10,10 +10,30 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useState } from "react";
 
-export default async function Navbar() {
+export default function Navbar() {
+  const { scrollY } = useScroll();
+
+  const [scroll, setScroll] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if(latest) {
+      setScroll(true)
+    }else {
+      setScroll(false)
+    }
+  })
+
   return (
-    <nav className="sticky py-3 inset-x-0 top-0 z-30 transition-all px-6 drop-shadow-lg">
+    <motion.nav
+      variants={{
+        visible: { backgroundColor: "#00274C", boxShadow: "0 25px 25px rgb(0 0 0 / 0.15)" },
+        hidden: { padding: "50px", y: 0}
+      }}
+      animate={scroll ? "visible" : "hidden"}
+      className="sticky inset-x-0 top-0 z-30 px-6 py-6 -translate-y-full text-white">
       <div className="hidden md:flex flex-row items-center">
         <Link className="basis-1/2 items-center" href="/">
           <Logo />
@@ -46,6 +66,6 @@ export default async function Navbar() {
       <div className="md:hidden">
         <p>=</p>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

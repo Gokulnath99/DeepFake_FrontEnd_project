@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { ClerkProvider } from "@clerk/nextjs";
 import DarkModeToggle from "@/components/DarkModeToggle";
+import BgImage from "@/components/BgImage";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,21 +31,11 @@ export default function RootLayout({
         >
           <body className={cn("min-h-screen font-sans antialiased grainy")}>
             <div>
+              <BgImage/>
               <Navbar />
-              <div
-                style={{
-                  margin: "0 auto",
-                  padding: "20px",
-                  maxWidth: "1200px",
-                }}
-              >
+              <div>
                 <DarkModeToggle />
                 {children}
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-x-0 top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-80"
-                >
-                </div>
               </div>
             </div>
           </body>

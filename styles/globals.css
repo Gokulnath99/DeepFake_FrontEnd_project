@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 85%;
     --foreground: 20 14.3% 4.1%;
     --card: 0 0% 100%;
     --card-foreground: 20 14.3% 4.1%;
@@ -57,5 +57,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .cardEffect {
+    @apply bg-card drop-shadow-xl hover:drop-shadow-2xl row-span-1 rounded-xl duration-200 p-4 border border-transparent justify-between flex flex-col space-y-4;
   }
 }

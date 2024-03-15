@@ -95,6 +95,13 @@ const config = {
         "scroll":
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
+      dropShadow: {
+        '3xl': '0 10px 10px rgba(0, 0, 0, 0.3)',
+        '4xl': [
+            '0 35px 35px rgba(0, 0, 0, 0.25)',
+            '0 45px 65px rgba(0, 0, 0, 0.15)'
+        ]
+      }
     },
   },
   plugins: [require("tailwindcss-animate"), addVariablesForColors],

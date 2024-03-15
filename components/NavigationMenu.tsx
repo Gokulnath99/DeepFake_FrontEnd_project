@@ -14,6 +14,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { motion } from "framer-motion";
 
 const components: { title: string; href: string; description: string }[] = [
   {
