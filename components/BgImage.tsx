@@ -19,6 +19,7 @@ function BgImage() {
         alt={"feature1"}
         style={{ objectFit: "fill" }}
         className="mix-blend-overlay blur"
+        priority={true}
       />
     </div>
   );

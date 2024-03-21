@@ -32,7 +32,7 @@ export default function RootLayout({
           <body className={cn("min-h-screen font-sans antialiased grainy")}>
             <div>
               <BgImage/>
-              <Navbar />
+              <Navbar/>
               <div>
                 <DarkModeToggle />
                 {children}
