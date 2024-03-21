@@ -94,8 +94,10 @@ export const InfiniteMovingCards = ({
               <Image
                 src={item.src}
                 alt={item.alt}
-                layout="fill"
-                objectFit="contain"
+                fill
+                style={{
+                  objectFit: 'cover', // cover, contain, none
+                }}
               />
             </blockquote>
           </li>

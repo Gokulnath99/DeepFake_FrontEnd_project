@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <motion.nav
       variants={{
-        visible: { backgroundColor: "#00274C", boxShadow: "0 25px 25px rgb(0 0 0 / 0.15)" },
+        visible: { backgroundColor: "#00274C", boxShadow: "0 25px 25px rgb(0 0 0 / 0.15)", },
         hidden: { padding: "50px", y: 0}
       }}
       animate={scroll ? "visible" : "hidden"}

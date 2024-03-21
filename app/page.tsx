@@ -19,12 +19,12 @@ export default function HomePage() {
   return (
     <>
       {/* MaxWidthWrapper component to control the maximum width of the content */}
-      <MaxWidthWrapper className="flex flex-col items-center justify-center text-center">
+      <div className="flex flex-col items-center justify-center text-center mb-40 md:mt-20 md:mb-60 mx-2">
         {/* Hero section starts */}
-        <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl">
+        <h1 className="max-w-4xl text-2xl font-bold md:text-6xl lg:text-7xl ">
           <TextGenerateEffect words="Leading the Fight Against Deepfakes" />
         </h1>
-        <p className="mt-5 max-w-prose sm:text-lg text-white">
+        <p className="mt-5 max-w-prose text-md sm:text-lg text-white ">
           Detection and Analysis with State-of-the-Art AI. Secure the Truth in a
           World of Synthetic Voices.
         </p>
@@ -40,10 +40,10 @@ export default function HomePage() {
           Get Started <ArrowRight className="ml-2 h-5 w-5" />
         </Link>
         {/* Hero section ends */}
-      </MaxWidthWrapper>
-      <div className="mx-auto w-full max-w-screen-xl px-2.5 md:px-20">
-        <div className="cardEffect m-0">
-          <div className="row-span-1 rounded-xl transition duration-200 shadow-input dark:shadow-none bg-white border border-transparent justify-between flex flex-col space-y-4">
+      </div>
+      <div className="mx-auto w-full max-w-screen-xl px-2.5 md:px-18">
+        <div className="cardEffect">
+          <div className="row-span-1 transition shadow-input dark:shadow-none bg-white border border-transparent justify-between flex flex-col">
             <div>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
               debitis temporibus incidunt veniam reiciendis quibusdam adipisci

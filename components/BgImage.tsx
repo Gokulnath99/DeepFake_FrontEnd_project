@@ -4,23 +4,28 @@ import feature_image from "@/public/featured/feature1.png";
 
 function BgImage() {
   return (
-    <div
-      className="
-        bg-gradient-to-tl from-[#00274C] to-[#145089]
-        w-full
-        h-screen
-        absolute
-        overflow-hidden
-        -z-20
-        "
-    >
-      <Image
-        src={feature_image}
-        alt={"feature1"}
-        style={{ objectFit: "fill" }}
-        className="mix-blend-overlay blur"
-        priority={true}
-      />
+    <div className="max-h-screen snap-y snap-mandatory overflow-y-scroll">
+      <div
+        className="
+          bg-gradient-to-tl from-[#00274C] to-[#145089]
+          w-full
+          h-screen
+          absolute
+          overflow-hidden
+          -z-20
+          snap-start
+          "
+      >
+        <Image
+          src={feature_image}
+          alt={"feature1"}
+          className="mix-blend-overlay blur"
+          fill
+          style={{
+            objectFit: 'cover', // cover, contain, none
+          }}
+        />
+      </div>
     </div>
   );
 }
