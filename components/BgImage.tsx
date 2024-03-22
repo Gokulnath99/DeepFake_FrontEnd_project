@@ -22,7 +22,7 @@ function BgImage() {
           className="mix-blend-overlay blur"
           fill
           style={{
-            objectFit: 'cover', // cover, contain, none
+            objectFit: 'cover',
           }}
         />
       </div>

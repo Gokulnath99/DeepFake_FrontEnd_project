@@ -13,6 +13,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import Image from "next/image";
 import feature_image from "@/public/featured/feature1.png";
 import { motion } from "framer-motion";
+import MediaCardComponent  from "@/components/MediaCardComponent";
 
 // HomePage functional component definition
 export default function HomePage() {
@@ -76,20 +77,33 @@ export default function HomePage() {
             <MovingCard />
           </motion.div>
           <motion.div whileHover={{ scale: 1.01 }} className="cardEffect">
-            <div className="text-[#00274C] dark:text-[#FFCB05]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-              debitis temporibus incidunt veniam reiciendis quibusdam adipisci
-              esse rerum molestias tenetur corporis sunt saepe sed molestiae
-              animi, libero laborum natus facere!
-            </div>
+            <h3 className="text-[#00274C] dark:text-[#FFCB05] text-sm uppercase tracking-[10px] mb-2">
+              Our Mission
+            </h3>
+            <h1 className="text-[#00274C] dark:text-[#FFCB05] text-2xl font-bold">
+              Combating Deepfakes through Detection, Education, and Advocacy
+            </h1>
+            <p className="text-left pr-3 text-lg">
+              we are dedicated to pioneering the detection of deepfakes,
+              educating the public on their dangers, and advocating for robust
+              legal frameworks to combat their spread, thereby ensuring the
+              integrity of digital media and protecting democratic values.
+            </p>
           </motion.div>
         </div>
-        <div>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Reprehenderit consequuntur iste voluptatum nisi. Accusamus a labore
-          eligendi iste nihil ipsa, perspiciatis laboriosam consequatur, ducimus
-          cupiditate nobis sint ea officiis doloribus.
-        </div>
+        <MaxWidthWrapper>
+          <motion.div whileHover={{ scale: 1.01 }} className="cardEffect">
+            <div className="mx-auto w-full max-w-screen-xl px-2.5 md:px-18">
+              <div>
+                <h3 className="text-[#00274C] dark:text-[#FFCB05] text-sm uppercase tracking-[10px] mb-2">
+                  Latest News and Updates
+                </h3>
+                <MediaCardComponent />
+              </div>
+              
+            </div>
+          </motion.div>
+        </MaxWidthWrapper>
       </MaxWidthWrapper>
     </>
   );
