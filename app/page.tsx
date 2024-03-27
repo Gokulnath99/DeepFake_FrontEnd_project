@@ -13,12 +13,34 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import Image from "next/image";
 import feature_image from "@/public/featured/feature1.png";
 import { motion } from "framer-motion";
-import MediaCardComponent  from "@/components/MediaCardComponent";
+import MediaCardComponent from "@/components/MediaCardComponent";
+
 
 // HomePage functional component definition
 export default function HomePage() {
   return (
     <>
+      <div
+        className="
+          bg-gradient-to-tl from-[#00274C] to-[#145089]
+          w-full
+          h-screen
+          absolute
+          overflow-hidden
+          -z-20
+          snap-start
+          top-0
+          "
+      >
+        <Image
+          src={feature_image}
+          alt={"feature1"}
+          className="mix-blend-overlay blur"
+          style={{
+            objectFit: 'cover',
+          }}
+        />
+      </div>
       {/* MaxWidthWrapper component to control the maximum width of the content */}
       <div className="flex flex-col items-center justify-center text-center mb-40 md:mt-20 md:mb-60 mx-2">
         {/* Hero section starts */}
@@ -61,7 +83,7 @@ export default function HomePage() {
       </div>
 
       <MaxWidthWrapper>
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 w-full mt-8">
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 w-full ">
           <motion.div whileHover={{ scale: 1.01 }} className="cardEffect">
             <h3 className="text-[#00274C] dark:text-[#FFCB05] text-sm uppercase tracking-[10px] mb-2">
               SPONSORS
@@ -91,19 +113,14 @@ export default function HomePage() {
             </p>
           </motion.div>
         </div>
-        <MaxWidthWrapper>
-          <motion.div whileHover={{ scale: 1.01 }} className="cardEffect">
-            <div className="mx-auto w-full max-w-screen-xl px-2.5 md:px-18">
-              <div>
-                <h3 className="text-[#00274C] dark:text-[#FFCB05] text-sm uppercase tracking-[10px] mb-2">
-                  Latest News and Updates
-                </h3>
-                <MediaCardComponent />
-              </div>
-              
-            </div>
-          </motion.div>
-        </MaxWidthWrapper>
+        <motion.div whileHover={{ scale: 1.01 }} className="cardEffect mt-8">
+          <div className="contain">
+            <h3 className="mb-9 text-[#00274C] dark:text-[#FFCB05] text-sm uppercase tracking-[10px] ">
+              Latest News and Updates
+            </h3>
+            <MediaCardComponent />
+          </div>
+        </motion.div>
       </MaxWidthWrapper>
     </>
   );

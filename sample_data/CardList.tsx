@@ -1,26 +1,3 @@
-// import { Card } from "./Card";
-// import { CardData } from "./types";
-// import { BrowserRouter as Router, Route } from "react-router-dom";
-
-// const List = ({ match, history }) => (
-//   <ul className="card-list">
-//     {cardData.map(card => (
-//       <Card
-//         key={card.id}
-//         isSelected={match.params.id === card.id}
-//         history={history}
-//         {...card}
-//       />
-//     ))}
-//   </ul>
-// );
-
-// export const CardList = () => (
-//   <Router>
-//     <Route path={["/:id", "/"]} component={List} />
-//   </Router>
-// );
-
 export const LeadershipTeamData = [
   {
     name: "Hafiz Malik",

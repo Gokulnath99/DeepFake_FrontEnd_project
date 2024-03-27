@@ -7,7 +7,7 @@ const Logo = () => {
     <div
       className="text-5xl font-extrabold text-[#FFCB05]"
     >
-      deVOX
+      AVOX
     </div>
   );
 };

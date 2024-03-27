@@ -5,8 +5,7 @@ import { cn } from "@/lib/utils";
 import Navbar from "../components/Navbar";
 import { ThemeProvider } from "../components/ThemeProvider";
 import { ClerkProvider } from "@clerk/nextjs";
-import DarkModeToggle from "@/components/DarkModeToggle";
-import BgImage from "@/components/BgImage";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,14 +29,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <body className={cn("min-h-screen font-sans antialiased grainy")}>
-            <div>
-              <BgImage/>
-              <Navbar/>
-              <div>
-                <DarkModeToggle />
-                {children}
-              </div>
-            </div>
+            <Navbar/>
+            {children}
           </body>
         </ThemeProvider>
       </html>
